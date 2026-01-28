@@ -3,37 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cogent Echo</title>
+    <title>Cogent Echo - Advancing Our Collective Future</title>
     <style>
-        body { font-family: sans-serif; padding: 2rem; max-width: 600px; margin: 0 auto; }
-        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
-        #response { margin-top: 20px; padding: 10px; background: #f4f4f4; border: 1px solid #ddd; display: none;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        header .tagline {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .vision h2 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 16px;
+        }
+        .vision p {
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+        .for-everyone h2 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .audience-item h3 {
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+        .audience-item p {
+            font-size: 0.95rem;
+            color: #718096;
+        }
+        .approach h2 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .approach-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .approach-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .approach-item .icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .approach-item h3 {
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+        .approach-item p {
+            font-size: 0.95rem;
+            color: #718096;
+        }
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        .cta h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .cta p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .cta-placeholder {
+            padding: 16px 32px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        .definition {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .definition strong {
+            font-style: normal;
+        }
+        footer p {
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 24px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Cogent Echo Interface</h1>
-    <p>Status: <span style="color:green">System Ready</span></p>
-    
-    <button id="actionBtn">Ping n8n Agent</button>
-    <div id="response">Waiting for data...</div>
+    <div class="container">
+        <header>
+            <h1>Cogent Echo</h1>
+            <p class="tagline">Advancing our collective future, one insight at a time.</p>
+        </header>
 
-    <script>
-        const WEBHOOK_URL = 'https://cogentecho.app.n8n.cloud/webhook/cogentecho.ai';
+        <section class="card vision">
+            <h2>Our Vision</h2>
+            <p>We're creating an inclusive space for exploration—where curiosity meets understanding and everyone can participate in shaping what comes next. By bridging expertise with accessibility, we're working toward a future where technology enhances both innovation and trust.</p>
+        </section>
 
-        document.getElementById('actionBtn').addEventListener('click', async () => {
-            const display = document.getElementById('response');
-            display.style.display = 'block';
-            display.innerText = 'Calling Agent...';
+        <section class="card for-everyone">
+            <h2>For Everyone</h2>
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <h3>Students & Educators</h3>
+                    <p>Engaging exploration for all learning levels.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Parents & Families</h3>
+                    <p>Understanding technology's role in daily life.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Curious Minds</h3>
+                    <p>A welcoming path from first questions to deeper understanding.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Organizations</h3>
+                    <p>A space for thoughtful exploration and readiness.</p>
+                </div>
+            </div>
+        </section>
 
-            try {
-                const res = await fetch(WEBHOOK_URL);
-                const data = await res.json();
-                display.innerText = 'Agent Response: ' + JSON.stringify(data, null, 2);
-            } catch (error) {
-                display.innerText = 'Error: ' + error.message;
-                console.error(error);
-            }
-        });
-    </script>
+        <section class="card approach">
+            <h2>Our Approach</h2>
+            <div class="approach-list">
+                <div class="approach-item">
+                    <div class="icon">~</div>
+                    <div>
+                        <h3>Guided Exploration</h3>
+                        <p>Like a museum docent, we help navigate complex ideas with clarity and care.</p>
+                    </div>
+                </div>
+                <div class="approach-item">
+                    <div class="icon">+</div>
+                    <div>
+                        <h3>Shared Wisdom</h3>
+                        <p>A space where different perspectives come together to foster understanding.</p>
+                    </div>
+                </div>
+                <div class="approach-item">
+                    <div class="icon">*</div>
+                    <div>
+                        <h3>Inclusive Growth</h3>
+                        <p>Everyone can participate, regardless of background or starting point.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card cta">
+            <h2>Join Us</h2>
+            <p>Whether you're just beginning to explore or looking to go deeper, there's a place for you here.</p>
+            <div class="cta-placeholder">More coming soon</div>
+        </section>
+
+        <footer>
+            <p class="definition"><strong>co·gent ech·o</strong> /ˈkōjənt ˈekō/ n. — A response that both reflects and extends an original concept through clear, logical development.</p>
+            <p>&copy; 2025 Cogent Echo LLC. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
