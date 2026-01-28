@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cogent Echo - Advancing Our Collective Future</title>
+    <title>Cogent Echo</title>
     <style>
         * {
             margin: 0;
@@ -11,221 +11,135 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #fff;
         }
         header {
-            text-align: center;
-            padding: 60px 0 40px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        header .tagline {
-            font-size: 1.25rem;
-            color: rgba(255,255,255,0.9);
-            font-weight: 300;
-        }
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .vision h2 {
-            font-size: 1.5rem;
-            color: #667eea;
-            margin-bottom: 16px;
-        }
-        .vision p {
-            font-size: 1.1rem;
-            color: #4a5568;
-        }
-        .for-everyone h2 {
-            font-size: 1.5rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .audience-item h3 {
-            font-size: 1rem;
-            color: #2d3748;
-            margin-bottom: 6px;
-        }
-        .audience-item p {
-            font-size: 0.95rem;
-            color: #718096;
-        }
-        .approach h2 {
-            font-size: 1.5rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-        .approach-list {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .approach-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-        .approach-item .icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 8px;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1rem;
-            flex-shrink: 0;
+            padding: 16px 24px;
+            border-bottom: 1px solid #eee;
         }
-        .approach-item h3 {
-            font-size: 1rem;
-            color: #2d3748;
-            margin-bottom: 4px;
+        .header-left {
+            font-size: 14px;
+            color: #666;
         }
-        .approach-item p {
-            font-size: 0.95rem;
-            color: #718096;
+        .header-center {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
         }
-        .cta {
+        .header-right {
+            font-size: 18px;
+            color: #666;
+            letter-spacing: 2px;
+        }
+        main {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+        .tagline {
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 80px;
+            letter-spacing: 0.5px;
         }
-        .cta h2 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 32px;
+            color: #222;
         }
-        .cta p {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
+        .section {
+            margin-bottom: 60px;
         }
-        .cta-placeholder {
-            padding: 16px 32px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 8px;
-            display: inline-block;
-            font-size: 0.9rem;
+        .section p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: center;
+            margin: 80px 0 32px;
+            color: #222;
+        }
+        .for-everyone-text {
+            text-align: center;
+            font-size: 16px;
+            color: #444;
+        }
+        .quote {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: center;
+            margin: 100px 0;
+            color: #222;
         }
         footer {
             text-align: center;
-            padding: 40px 20px;
-            color: rgba(255,255,255,0.8);
+            padding: 40px 24px;
+            border-top: 1px solid #eee;
         }
-        .definition {
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-            font-style: italic;
+        footer a {
+            color: #5a7fa8;
+            text-decoration: none;
         }
-        .definition strong {
-            font-style: normal;
+        footer a:hover {
+            text-decoration: underline;
         }
-        footer p {
-            font-size: 0.85rem;
+        .footer-link {
+            font-size: 15px;
+            margin-bottom: 16px;
         }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .card {
-                padding: 24px;
-            }
+        .footer-legal {
+            font-size: 13px;
+            color: #888;
+        }
+        .footer-legal a {
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Cogent Echo</h1>
-            <p class="tagline">Advancing our collective future, one insight at a time.</p>
-        </header>
+    <header>
+        <div class="header-left">&#x2315;</div>
+        <div class="header-center">cogentecho.ai</div>
+        <div class="header-right">•••</div>
+    </header>
 
-        <section class="card vision">
-            <h2>Our Vision</h2>
-            <p>We're creating an inclusive space for exploration—where curiosity meets understanding and everyone can participate in shaping what comes next. By bridging expertise with accessibility, we're working toward a future where technology enhances both innovation and trust.</p>
+    <main>
+        <p class="tagline">Finding Your Natural Path Forward</p>
+
+        <section class="section">
+            <h1>Our Vision</h1>
+            <p>We envision a world where personal growth and collective advancement are naturally intertwined. Through stewardship, we create environments that encourage self-reflection and exploration, enabling individuals and systems to evolve together.</p>
+            <p>This journey of discovery isn't just about improving systems – it's about understanding ourselves better and securing our shared future. As we explore what's possible, each insight strengthens our collective potential.</p>
+            <p>In this interconnected journey, each insight we uncover fortifies our shared potential. We don't just focus on improving systems; we strive to deepen our understanding of ourselves and the world around us. By exploring the possibilities, we empower everyone to take meaningful steps towards a better future.</p>
         </section>
 
-        <section class="card for-everyone">
+        <section class="section">
             <h2>For Everyone</h2>
-            <div class="audience-grid">
-                <div class="audience-item">
-                    <h3>Students & Educators</h3>
-                    <p>Engaging exploration for all learning levels.</p>
-                </div>
-                <div class="audience-item">
-                    <h3>Parents & Families</h3>
-                    <p>Understanding technology's role in daily life.</p>
-                </div>
-                <div class="audience-item">
-                    <h3>Curious Minds</h3>
-                    <p>A welcoming path from first questions to deeper understanding.</p>
-                </div>
-                <div class="audience-item">
-                    <h3>Organizations</h3>
-                    <p>A space for thoughtful exploration and readiness.</p>
-                </div>
-            </div>
+            <p class="for-everyone-text">Whether you're a curious child, a busy parent, or a growing organization, your next step forward exists naturally within your current situation. Our role is to help you discover it.</p>
         </section>
 
-        <section class="card approach">
-            <h2>Our Approach</h2>
-            <div class="approach-list">
-                <div class="approach-item">
-                    <div class="icon">~</div>
-                    <div>
-                        <h3>Guided Exploration</h3>
-                        <p>Like a museum docent, we help navigate complex ideas with clarity and care.</p>
-                    </div>
-                </div>
-                <div class="approach-item">
-                    <div class="icon">+</div>
-                    <div>
-                        <h3>Shared Wisdom</h3>
-                        <p>A space where different perspectives come together to foster understanding.</p>
-                    </div>
-                </div>
-                <div class="approach-item">
-                    <div class="icon">*</div>
-                    <div>
-                        <h3>Inclusive Growth</h3>
-                        <p>Everyone can participate, regardless of background or starting point.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <p class="quote">"Fortune favors the prepared mind"</p>
+    </main>
 
-        <section class="card cta">
-            <h2>Join Us</h2>
-            <p>Whether you're just beginning to explore or looking to go deeper, there's a place for you here.</p>
-            <div class="cta-placeholder">More coming soon</div>
-        </section>
-
-        <footer>
-            <p class="definition"><strong>co·gent ech·o</strong> /ˈkōjənt ˈekō/ n. — A response that both reflects and extends an original concept through clear, logical development.</p>
-            <p>&copy; 2025 Cogent Echo LLC. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p class="footer-link"><a href="/digital-garden/">digital-garden</a></p>
+        <p class="footer-legal">© 2026 <a href="#">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
